@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Daksh Agarwal is a sports strategist working on partnerships, sponsorships and new sports properties, with consulting experience at KPMG India and a background in competitive cricket.">
+<meta property="og:title" content="Daksh Agarwal | Sports Strategy">
+<meta property="og:description" content="Bridging Passion with Performance. Sports strategy, partnerships and sponsorships.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="images/icon.png">
+<link rel="apple-touch-icon" href="images/icon.png">
+<style>
+:root{color-scheme:light}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<title>Daksh Agarwal | Sports Strategy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: a warm, multi-tab sports-strategy portfolio; sticky tab bar, one page shown at a time, each opening with a kicker + headline intro */
+:root {
+  --bg: #fbf5ee;
+  --surface: #fffaf4;
+  --ink: #1d2e26;
+  --muted: #5d6a60;
+  --line: #e8dccd;
+  --pitch: #2f5d47;
+  --sun: #e39b2f;
+  --sun-soft: #f7e3c3;
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Figtree", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15201b; --surface: #1b2822; --ink: #f2e9dc; --muted: #a9b3aa; --line: #2c3b33;
+    --pitch: #8cc4a6; --sun: #f0ae4a; --sun-soft: #3a2f1e;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15201b; --surface: #1b2822; --ink: #f2e9dc; --muted: #a9b3aa; --line: #2c3b33;
+  --pitch: #8cc4a6; --sun: #f0ae4a; --sun-soft: #3a2f1e;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.6;
+  padding-inline: 20px;
+}
+.wrap { max-width: 1040px; margin-inline: auto; }
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.1; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--sun); outline-offset: 3px; border-radius: 6px; }
+
+/* Nav */
+.nav {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
+  backdrop-filter: blur(8px);
+  margin-inline: -20px; padding: 12px 20px;
+  border-bottom: 1px solid var(--line);
+}
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; text-decoration: none; letter-spacing: -0.01em; flex-shrink: 0; }
+.brand span { color: var(--sun); }
+.tabs { list-style: none; display: flex; gap: 4px; margin: 0; padding: 0; overflow-x: auto; scrollbar-width: none; min-width: 0; }
+.tabs::-webkit-scrollbar { display: none; }
+.tabs a { display: block; white-space: nowrap; text-decoration: none; font-weight: 500; font-size: 0.93rem; color: var(--muted); padding: 7px 13px; border-radius: 999px; }
+.tabs a:hover { color: var(--ink); background: var(--sun-soft); }
+.tabs a[aria-current="page"] { color: var(--bg); background: var(--ink); }
+
+/* Pages */
+.page { animation: rise .35s ease both; padding-bottom: 24px; }
+@keyframes rise { from { opacity: .4; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.page-intro { padding-block: 56px 36px; display: grid; gap: 16px; max-width: 760px; }
+.page-intro h1 { font-size: clamp(2.3rem, 5.5vw, 3.6rem); font-weight: 800; letter-spacing: -0.025em; }
+.page-intro .lede { font-size: 1.18rem; color: var(--muted); max-width: 58ch; }
+.eyebrow, .kicker { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pitch); }
+.block { padding-block: 40px; border-top: 1px solid var(--line); }
+.block > h2 { font-size: clamp(1.6rem, 3.4vw, 2.1rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 22px; }
+.next { display: flex; justify-content: flex-end; padding-block: 32px 8px; }
+.next a { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; text-decoration: none; display: inline-flex; gap: 10px; align-items: baseline; }
+.next a small { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 500; }
+.next a:hover span { color: var(--sun); }
+
+/* Home hero */
+.hero { padding-block: 64px 48px; display: grid; grid-template-columns: 1.35fr 1fr; gap: 48px; align-items: center; }
+.hero-text { min-width: 0; display: grid; gap: 22px; }
+.hero h1 { font-size: clamp(2.6rem, 6.5vw, 4.6rem); font-weight: 800; letter-spacing: -0.03em; }
+.hero h1 em { font-style: normal; color: var(--sun); }
+.hero .lede { font-size: 1.2rem; color: var(--muted); max-width: 40ch; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { border: 1px solid var(--line); background: var(--surface); padding: 5px 12px; border-radius: 999px; font-size: 0.88rem; font-weight: 500; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 999px; font-weight: 600; text-decoration: none; font-size: 0.98rem; border: 1.5px solid var(--ink); }
+.btn.primary { background: var(--ink); color: var(--bg); }
+.btn.primary:hover { background: var(--pitch); border-color: var(--pitch); }
+.btn.ghost:hover { background: var(--sun-soft); }
+
+.portrait { position: relative; justify-self: center; width: min(100%, 340px); margin: 0; }
+.portrait::before { content: ""; position: absolute; inset: 18px -18px -18px 18px; border-radius: 200px 200px 28px 28px; background: var(--sun); }
+.portrait img { position: relative; display: block; width: 100%; aspect-ratio: 278 / 289; object-fit: cover; border-radius: 200px 200px 28px 28px; max-width: 100%; }
+.portrait .badge { position: absolute; left: -14px; bottom: 26px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 10px 14px; font-size: 0.85rem; line-height: 1.35; box-shadow: 0 8px 24px rgb(0 0 0 / 0.08); }
+.badge b { font-family: var(--font-display); display: block; font-size: 1rem; }
+
+.highlights { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-block: 20px; display: grid; grid-template-columns: 150px 1fr; gap: 20px; align-items: start; }
+.hl-label { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.highlights ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 32px; min-width: 0; }
+.dot-list li, .highlights li { color: var(--muted); padding-left: 16px; position: relative; line-height: 1.5; }
+.highlights li { font-size: 0.98rem; }
+.dot-list li::before, .highlights li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px; border-radius: 50%; background: var(--sun); }
+.highlights b, .dot-list b { color: var(--ink); font-weight: 600; }
+
+.explore { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.explore a { text-decoration: none; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 22px 24px; display: grid; gap: 6px; transition: border-color .2s ease, transform .2s ease; }
+.explore a:hover { border-color: var(--sun); transform: translateY(-2px); }
+.explore h3 { font-size: 1.3rem; font-weight: 700; display: flex; justify-content: space-between; gap: 12px; }
+.explore h3 span { color: var(--sun); }
+.explore p { color: var(--muted); font-size: 0.98rem; }
+
+/* About */
+.story { display: grid; grid-template-columns: 1.5fr 1fr; gap: 44px; align-items: start; }
+.story-text { display: grid; gap: 18px; max-width: 62ch; min-width: 0; }
+.story-text p:first-child { font-family: var(--font-display); font-size: 1.3rem; font-weight: 500; line-height: 1.4; }
+.story aside { display: grid; gap: 14px; }
+.facts { list-style: none; margin: 0; padding: 0; display: grid; }
+.facts li { display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding-block: 11px; border-top: 1px solid var(--line); font-size: 0.97rem; }
+.facts li:last-child { border-bottom: 1px solid var(--line); }
+.facts span:first-child { font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); padding-top: 3px; }
+.facts span:last-child { font-weight: 500; }
+
+.principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.principle { display: grid; gap: 10px; align-content: start; padding-top: 16px; border-top: 3px solid var(--sun); }
+.principle h3 { font-size: 1.2rem; font-weight: 700; }
+.principle p { color: var(--muted); font-size: 0.98rem; }
+
+.caps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.cap { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 22px 24px; display: grid; gap: 12px; align-content: start; }
+.cap h3 { font-size: 1.15rem; font-weight: 700; }
+.chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.chip { font-size: 0.86rem; padding: 4px 11px; border-radius: 999px; background: var(--sun-soft); color: var(--ink); }
+.chip.outline { background: transparent; border: 1px solid var(--line); color: var(--muted); }
+
+/* Experience */
+.role { display: grid; grid-template-columns: 180px 1fr; gap: 28px; padding-block: 32px; border-top: 1px solid var(--line); }
+.role:last-of-type { border-bottom: 1px solid var(--line); }
+.when { font-family: var(--font-mono); font-size: 0.85rem; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 4px; display: grid; gap: 6px; align-content: start; }
+.when .kind { font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; color: var(--pitch); }
+.role-body { min-width: 0; display: grid; gap: 14px; }
+.role-body h3 { font-size: 1.45rem; font-weight: 700; }
+.role-body .org { color: var(--pitch); font-weight: 600; margin-top: -6px; }
+.role-body > p { color: var(--muted); max-width: 64ch; }
+.dot-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.areas { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px 28px; }
+.area { display: grid; gap: 8px; align-content: start; min-width: 0; }
+.area h4 { font-size: 1.02rem; font-weight: 700; }
+.secondment { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 22px 24px; display: grid; gap: 12px; }
+.secondment h4 { font-size: 1.2rem; }
+.secondment .note { font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+
+/* Projects */
+.work { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.work-item { border-top: 3px solid var(--pitch); background: var(--surface); border-radius: 0 0 18px 18px; padding: 20px 22px; display: grid; gap: 8px; align-content: start; }
+.work-item .meta { font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.work-item h3 { font-size: 1.2rem; font-weight: 700; }
+.work-item p { color: var(--muted); font-size: 0.98rem; }
+
+.case { display: grid; grid-template-columns: 260px 1fr; gap: 32px; padding-block: 34px; border-top: 1px solid var(--line); }
+.case:last-of-type { border-bottom: 1px solid var(--line); }
+.case-head { display: grid; gap: 10px; align-content: start; }
+.case-head .meta { font-family: var(--font-mono); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.case-head .type { color: var(--pitch); }
+.case-head h3 { font-size: 1.45rem; font-weight: 700; }
+.case-body { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; min-width: 0; }
+.case-body div { display: grid; gap: 6px; align-content: start; min-width: 0; }
+.case-body h4 { font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--sun); font-weight: 500; }
+.case-body p { color: var(--muted); font-size: 0.98rem; }
+
+/* On the field */
+.innings { list-style: none; margin: 0; padding: 0; position: relative; display: grid; gap: 0; }
+.innings::before { content: ""; position: absolute; left: 71px; top: 10px; bottom: 10px; width: 2px; background: var(--line); }
+.innings li { display: grid; grid-template-columns: 64px 18px 1fr; gap: 18px; padding-block: 16px; align-items: start; }
+.innings .yr { font-family: var(--font-mono); font-size: 0.92rem; color: var(--sun); font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px; }
+.innings .pin { width: 14px; height: 14px; border-radius: 50%; background: var(--bg); border: 3px solid var(--pitch); margin-top: 5px; position: relative; }
+.innings li.big .pin { background: var(--sun); border-color: var(--sun); }
+.innings b { display: block; font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; line-height: 1.25; }
+.innings span.sub { color: var(--muted); }
+
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.list { list-style: none; padding: 0; margin: 0; display: grid; }
+.list li { display: grid; grid-template-columns: 64px 1fr; gap: 16px; padding-block: 14px; border-top: 1px solid var(--line); }
+.list li:last-child { border-bottom: 1px solid var(--line); }
+.list .yr { font-family: var(--font-mono); font-size: 0.88rem; color: var(--sun); font-variant-numeric: tabular-nums; padding-top: 2px; }
+.list b { display: block; font-weight: 600; }
+.list span.sub { color: var(--muted); font-size: 0.95rem; }
+
+/* Gallery + press */
+.gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 40px; }
+.gallery figure { margin: 0; position: relative; border-radius: 18px; overflow: hidden; background: var(--line); }
+.gallery .g-main { grid-column: 1 / -1; }
+.gallery img { display: block; width: 100%; max-width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.gallery .g-main img { aspect-ratio: 16 / 8; object-position: 50% 30%; }
+.gallery figcaption { position: absolute; left: 12px; bottom: 12px; right: 12px; width: fit-content; max-width: calc(100% - 24px); background: rgb(15 24 20 / 0.72); color: #f6ead6; font-size: 0.85rem; padding: 6px 12px; border-radius: 999px; backdrop-filter: blur(4px); }
+.press { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.clip { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; display: grid; align-content: start; }
+.clip img { display: block; width: 100%; max-width: 100%; border-bottom: 1px solid var(--line); background: #fff; }
+.clip-text { padding: 20px 22px; display: grid; gap: 8px; align-content: start; }
+.clip .src { font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pitch); }
+.clip h3 { font-size: 1.3rem; font-weight: 700; }
+.clip p { color: var(--muted); font-size: 0.98rem; }
+.clip.feature { grid-column: 1 / -1; background: var(--sun-soft); border-color: transparent; }
+.clip.feature .clip-text { padding: 28px 30px; gap: 12px; max-width: 72ch; }
+.clip.feature h3 { font-size: clamp(1.6rem, 3.6vw, 2.2rem); font-weight: 800; }
+.clip.feature p { color: var(--ink); }
+.clip .figs { font-family: var(--font-mono); font-size: 1rem; color: var(--ink); font-variant-numeric: tabular-nums; letter-spacing: 0.04em; }
+.clip .btn { justify-self: start; margin-top: 4px; }
+
+/* Contact */
+.contact { background: var(--sun-soft); border-radius: 28px; padding: clamp(26px, 5vw, 52px); display: grid; gap: 22px; margin-top: 8px; }
+.contact h2 { font-size: clamp(1.8rem, 4.5vw, 2.8rem); font-weight: 800; letter-spacing: -0.02em; }
+.channels { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.channel { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-width: 0; }
+.channel div { min-width: 0; }
+.channel small { display: block; font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+.channel .val { font-weight: 600; overflow-wrap: anywhere; user-select: all; }
+.channel button, .channel a.go { flex-shrink: 0; font: inherit; font-size: 0.85rem; font-weight: 600; border: 1.5px solid var(--ink); background: transparent; color: var(--ink); border-radius: 999px; padding: 6px 14px; cursor: pointer; text-decoration: none; }
+.channel button:hover, .channel a.go:hover { background: var(--ink); color: var(--bg); }
+.help { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+footer { padding-block: 32px 40px; color: var(--muted); font-size: 0.9rem; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-top: 1px solid var(--line); margin-top: 32px; }
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; padding-block: 36px; gap: 40px; }
+  .portrait { width: min(80%, 300px); order: -1; }
+  .story, .split, .principles, .caps, .areas, .work, .explore, .channels, .help, .gallery, .press { grid-template-columns: 1fr; }
+  .gallery .g-main img { aspect-ratio: 4 / 3; }
+  .highlights { grid-template-columns: 1fr; gap: 12px; }
+  .highlights ul { grid-template-columns: 1fr; }
+  .role, .case { grid-template-columns: 1fr; gap: 14px; }
+  .case-body { grid-template-columns: 1fr; gap: 16px; }
+  .when { grid-auto-flow: column; justify-content: start; gap: 14px; }
+  .page-intro { padding-block: 36px 24px; }
+}
+@media (max-width: 560px) {
+  .brand { display: none; }
+  .nav .wrap { justify-content: flex-start; }
+  .innings::before { left: 55px; }
+  .innings li { grid-template-columns: 48px 18px 1fr; gap: 12px; }
+}
+</style>
+</head>
+<body>
+
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#home" data-nav="home">Daksh<span>.</span></a>
+    <ul class="tabs">
+      <li><a href="#home" data-nav="home">Home</a></li>
+      <li><a href="#about" data-nav="about">About</a></li>
+      <li><a href="#experience" data-nav="experience">Experience</a></li>
+      <li><a href="#projects" data-nav="projects">Projects</a></li>
+      <li><a href="#field" data-nav="field">On the field</a></li>
+      <li><a href="#contact" data-nav="contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ============ HOME ============ -->
+<div class="page" data-page="home">
+  <div class="hero">
+    <div class="hero-text">
+      <span class="eyebrow">Sports Strategy · Partnerships · India</span>
+      <h1>Bridging Passion with <em>Performance</em></h1>
+      <p class="lede">I'm Daksh Agarwal, a sports strategist. I help sports organisations, leagues and brands grow through partnerships, sponsorships and new sports properties, with consulting experience at KPMG India.</p>
+      <div class="tags">
+        <span class="tag">Sports Strategy</span>
+        <span class="tag">Partnerships &amp; Sponsorships</span>
+        <span class="tag">Sports IP Development</span>
+        <span class="tag">Market Assessment</span>
+      </div>
+      <div class="cta">
+        <a class="btn primary" href="#experience" data-nav="experience">See my work</a>
+        <a class="btn ghost" href="#contact" data-nav="contact">Get in touch</a>
+      </div>
+    </div>
+    <figure class="portrait">
+      <img src="images/daksh-agarwal.jpg" alt="Portrait of Daksh Agarwal">
+      <div class="badge"><b>9 wickets</b>in a single innings, 2015</div>
+    </figure>
+  </div>
+
+  <div class="highlights" aria-label="Selected highlights">
+    <span class="hl-label">Selected highlights</span>
+    <ul>
+      <li>Supported the <b>₹30 crore</b> sale of an ISPL franchise</li>
+      <li>Led strategy for ISSO, reaching <b>25,000+</b> student athletes</li>
+      <li>Ran sponsorship for a Usain Bolt-led IP across <b>400+</b> schools</li>
+      <li>Launched <b>ISSO Golf</b> with the Professional Golf Tour of India</li>
+    </ul>
+  </div>
+
+  <div class="block" style="border-top:0">
+    <h2>Explore</h2>
+    <nav class="explore" aria-label="Site sections">
+      <a href="#about" data-nav="about"><h3>About <span>→</span></h3><p>From competitive cricket to the business of sport, and how I approach strategy.</p></a>
+      <a href="#experience" data-nav="experience"><h3>Experience <span>→</span></h3><p>Sports advisory, a strategy secondment, performance analysis and tournament operations.</p></a>
+      <a href="#projects" data-nav="projects"><h3>Projects <span>→</span></h3><p>Advisory work and case studies in sponsorship, athlete management and sports marketing.</p></a>
+      <a href="#field" data-nav="field"><h3>On the field <span>→</span></h3><p>A decade of competitive cricket, from Mumbai to state level and the IJPL in Dubai.</p></a>
+    </nav>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<div class="page" data-page="about" hidden>
+  <div class="page-intro">
+    <span class="kicker">About</span>
+    <h1>Strategy shaped by the game</h1>
+    <p class="lede">I'm a sports strategy and commercial advisory professional who has spent as much time on the pitch as in the boardroom.</p>
+  </div>
+
+  <div class="block">
+    <div class="story">
+      <div class="story-text">
+        <p>Cricket came first. I played competitively through school and beyond, and that is still how I look at sport: from the inside.</p>
+        <p>I represented Maharashtra at the All-India National Cricket Meet and in AISM Under-19 cricket, played for the Mumbai Mavericks in the Indian Junior Premier League in Dubai, and made the sports pages of DNA and the Times of India for taking 9 wickets in a single innings.</p>
+        <p>Alongside the game, I built a grounding in its business. I studied sports management at the International Institute of Sports Management, then worked on the ground: running a T20 tournament and its player auction, managing operations for a gaming company, writing sports content and analysing football matches as a performance analyst.</p>
+        <p>I went on to complete a PGP in Sports Management at Jio Institute, graduating second in my batch. Through consulting with KPMG India's Sports Advisory practice, I've worked on franchise transactions, new sports IPs, multi-year partnership frameworks and growth strategy, including a secondment leading strategy for the International Schools Sports Organization.</p>
+      </div>
+      <aside>
+        <ul class="facts">
+          <li><span>Focus</span><span>Sports strategy, partnerships &amp; sponsorships</span></li>
+          <li><span>Consulting</span><span>KPMG India, Sports Advisory</span></li>
+          <li><span>Education</span><span>PGP Sports Management, Jio Institute</span></li>
+          <li><span>Plays</span><span>Cricket, state level</span></li>
+          <li><span>Based in</span><span>India</span></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2>How I work</h2>
+    <div class="principles">
+      <div class="principle"><h3>Think like a player</h3><p>Years of competitive cricket help me understand what athletes, teams, fans and organisers actually need, so a strategy works on the ground as well as on paper.</p></div>
+      <div class="principle"><h3>Build the commercial case</h3><p>Every idea needs a business behind it: market sizing, competitor benchmarks, rights structures, revenue models and a clear go-to-market plan.</p></div>
+      <div class="principle"><h3>Back it with data</h3><p>From tagging football matches to studying fantasy sports viewership, I use data to test assumptions and sharpen recommendations.</p></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2>What I bring</h2>
+    <div class="caps">
+      <div class="cap"><h3>Strategy</h3><div class="chips"><span class="chip">Growth strategy</span><span class="chip">Market entry</span><span class="chip">Market sizing</span><span class="chip">Competitor benchmarking</span><span class="chip">International expansion</span></div></div>
+      <div class="cap"><h3>Partnerships &amp; sponsorships</h3><div class="chips"><span class="chip">Sponsorship frameworks</span><span class="chip">Partnership structuring</span><span class="chip">MoUs</span><span class="chip">Commercial rights</span><span class="chip">Category exclusivity</span><span class="chip">Activation plans</span></div></div>
+      <div class="cap"><h3>Sports IP &amp; events</h3><div class="chips"><span class="chip">IP &amp; league concepts</span><span class="chip">Business models</span><span class="chip">Go-to-market</span><span class="chip">Tournament operations</span><span class="chip">Player auctions</span></div></div>
+      <div class="cap"><h3>Analysis &amp; communication</h3><div class="chips"><span class="chip">Performance analysis</span><span class="chip">Match &amp; player reports</span><span class="chip">Investment decks</span><span class="chip">Leadership presentations</span></div></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2>Sports I've worked across</h2>
+    <div class="chips">
+      <span class="chip outline">Cricket</span><span class="chip outline">Golf</span><span class="chip outline">Football</span><span class="chip outline">Kabaddi</span><span class="chip outline">Athletics</span><span class="chip outline">Cycling</span><span class="chip outline">3v3 Basketball</span><span class="chip outline">Futsal</span><span class="chip outline">E-Cycling</span><span class="chip outline">Street cricket</span>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2>Education</h2>
+    <ul class="list">
+      <li><span class="yr">2025</span><div><b>PGP, Sports Management</b><span class="sub">Jio Institute · 9.03/10 CGPA · 2nd rank, Dean's Academic Excellence Award</span></div></li>
+      <li><span class="yr">2022</span><div><b>Bachelor of Sports Management</b><span class="sub">International Institute of Sports Management, University of Mumbai</span></div></li>
+    </ul>
+  </div>
+
+  <div class="next"><a href="#experience" data-nav="experience"><small>Next</small><span>Experience →</span></a></div>
+</div>
+
+<!-- ============ EXPERIENCE ============ -->
+<div class="page" data-page="experience" hidden>
+  <div class="page-intro">
+    <span class="kicker">Experience</span>
+    <h1>From the auction table to the advisory room</h1>
+    <p class="lede">Five roles across consulting, analytics, events and digital sport, each adding a different view of how the sports business works.</p>
+  </div>
+
+  <article class="role">
+    <div class="when"><span>From Apr 2025</span><span class="kind">Consulting</span></div>
+    <div class="role-body">
+      <h3>Associate Consultant, Sports Advisory</h3>
+      <span class="org">KPMG India</span>
+      <p>Advising sports organisations, corporates and sporting properties on strategy, commercialisation, partnerships and growth, with exposure across cricket, golf, football and emerging sports.</p>
+      <div class="areas">
+        <div class="area"><h4>Transactions &amp; investment</h4><ul class="dot-list"><li>Supported the <b>₹30 crore</b> sale of an Indian Street Premier League (ISPL) franchise with commercial strategy and transaction support.</li><li>Built strategic proposals and investment and partnership decks for leagues, federations and corporates, presented to senior leadership and external decision-makers.</li></ul></div>
+        <div class="area"><h4>Sports IP &amp; events</h4><ul class="dot-list"><li>Helped conceptualise a <b>Usain Bolt</b>-led IP for DreamSetGo, leading communications, operations and sponsorship strategy across 400+ schools, ~7,500 participants and 15 cities.</li><li>Built and evaluated new IPs and league concepts, including <b>3v3 Basketball, Futsal and E-Cycling</b>, with business models, stakeholder maps and go-to-market plans.</li></ul></div>
+        <div class="area"><h4>Partnerships &amp; sponsorship</h4><ul class="dot-list"><li>Designed multi-year partnership and sponsorship frameworks covering commercial rights, category exclusivity, branding, revenue sharing and joint IP development.</li></ul></div>
+        <div class="area"><h4>Research &amp; leadership</h4><ul class="dot-list"><li>Delivered market assessments including market sizing and competitor benchmarking.</li><li>Led research for <b>21 interns</b> across 7 sports strategy projects, from scoping to delivery.</li></ul></div>
+      </div>
+
+      <div class="secondment">
+        <span class="note">Secondment · Sports Strategy &amp; Commercial Advisory</span>
+        <h4>International Schools Sports Organization (ISSO)</h4>
+        <p style="color:var(--muted)">A fast-growing sports organisation for international schools, reaching 600+ IB and Cambridge schools and 25,000+ student athletes.</p>
+        <ul class="dot-list">
+          <li>Led growth, commercialisation and expansion strategy across India and international markets.</li>
+          <li>Formalised strategic and commercial MoUs with <b>JSW Sports</b>, the <b>Cycling Federation of India</b> and the <b>Professional Golf Tour of India</b>, along with corporates and universities, defining partnership structures, rights and joint initiatives.</li>
+          <li>Developed and launched <b>ISSO Golf</b> as a new vertical with the PGTI, from partnership proposition to activation framework.</li>
+          <li>Contributed to market-entry strategy and launch planning for expansion into <b>Dubai and Oman</b>.</li>
+          <li>Identified new IPs, competitions and participation programmes to strengthen ISSO's offer to schools, parents and student athletes.</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <article class="role">
+    <div class="when"><span>Oct – Dec 2024</span><span class="kind">Internship</span></div>
+    <div class="role-body">
+      <h3>Performance Analyst Intern</h3>
+      <span class="org">Stepout Play</span>
+      <ul class="dot-list">
+        <li>Tagged <b>42 football matches</b> and quality-checked game reviews.</li>
+        <li>Produced match reports using vector fields, sense matrices and network analysis to help improve results.</li>
+        <li>Built player reports for international academies, tracking tackles, passes, goals and player movement.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="role">
+    <div class="when"><span>Sep 2022 – Jan 2023</span><span class="kind">Freelance</span></div>
+    <div class="role-body">
+      <h3>Operations</h3>
+      <span class="org">Goregaon Sports Club</span>
+      <ul class="dot-list">
+        <li>Organised the GSC T20 Cricket Tournament end to end.</li>
+        <li>Planned and ran the auction of <b>180 players</b>, selected from 312 registrations, across 10 teams.</li>
+        <li>Pitched sponsors and signed a leading bank as <b>title sponsor</b>.</li>
+        <li>Coordinated stakeholders on match days and drew <b>1,200 online viewers</b>, the highest in three years.</li>
+        <li>Planned and hosted opening and closing ceremonies for a crowd of 1,000.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="role">
+    <div class="when"><span>Sep 2021 – Jun 2022</span><span class="kind">Freelance</span></div>
+    <div class="role-body">
+      <h3>Operations</h3>
+      <span class="org">Rubicube Gaming Pvt Ltd</span>
+      <ul class="dot-list">
+        <li>Managed content for PokerStreet Academy, including blogs, imagery and explainer videos.</li>
+        <li>Analysed gameplay and tournament data, helping increase rake revenue.</li>
+        <li>Managed game integrity during live events.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="role">
+    <div class="when"><span>Apr – Jul 2021</span><span class="kind">Internship</span></div>
+    <div class="role-body">
+      <h3>Intern</h3>
+      <span class="org">SportsTiger</span>
+      <ul class="dot-list">
+        <li>Wrote blogs on the latest sports news and events.</li>
+        <li>Ran Quora promotion that brought articles into the <b>top 3 search results</b>.</li>
+        <li>Built backlinks and a blog database to grow organic traffic.</li>
+      </ul>
+    </div>
+  </article>
+
+  <div class="next"><a href="#projects" data-nav="projects"><small>Next</small><span>Projects →</span></a></div>
+</div>
+
+<!-- ============ PROJECTS ============ -->
+<div class="page" data-page="projects" hidden>
+  <div class="page-intro">
+    <span class="kicker">Projects</span>
+    <h1>Ideas, pitches and plans</h1>
+    <p class="lede">Selected advisory work, followed by case studies from my sports management training.</p>
+  </div>
+
+  <div class="block">
+    <h2>Selected advisory work</h2>
+    <div class="work">
+      <div class="work-item"><span class="meta">Transaction · Street cricket</span><h3>ISPL franchise sale</h3><p>Commercial strategy and transaction support for the ₹30 crore sale of an Indian Street Premier League franchise.</p></div>
+      <div class="work-item"><span class="meta">Sports IP · Schools</span><h3>Usain Bolt-led IP for DreamSetGo</h3><p>Communications, operations and sponsorship strategy for a schools programme spanning 400+ schools, ~7,500 participants and 15 cities.</p></div>
+      <div class="work-item"><span class="meta">New vertical · Golf</span><h3>ISSO Golf</h3><p>Built the partnership proposition and activation framework to launch golf at ISSO with the Professional Golf Tour of India.</p></div>
+      <div class="work-item"><span class="meta">Market entry · GCC</span><h3>ISSO in Dubai and Oman</h3><p>Market-entry strategy and launch planning for ISSO's first international markets.</p></div>
+      <div class="work-item"><span class="meta">New IPs · Emerging sports</span><h3>3v3 Basketball, Futsal, E-Cycling</h3><p>Business models, stakeholder ecosystems, sponsorship advisory and go-to-market strategy for new sports properties and leagues.</p></div>
+      <div class="work-item"><span class="meta">Event · Cricket</span><h3>GSC T20 Tournament</h3><p>Ran the tournament end to end, from a 180-player auction to a bank title sponsor and record online viewership.</p></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2>Case studies</h2>
+
+    <article class="case">
+      <div class="case-head"><span class="meta"><span class="type">Research</span> · Since Nov 2024</span><h3>Impact of Fantasy Sports on Viewer Engagement</h3></div>
+      <div class="case-body">
+        <div><h4>The question</h4><p>How is the rise of fantasy sports changing the way fans watch live sport?</p></div>
+        <div><h4>What I'm doing</h4><p>Studying viewership patterns among fantasy players and how fan behaviour shifts around matches.</p></div>
+        <div><h4>Why it matters</h4><p>Shows how broadcasters can use fantasy data to keep fans engaged for longer.</p></div>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-head"><span class="meta"><span class="type">Athlete management</span> · Aug 2024</span><h3>Pitching Avinash Sable for sponsorship</h3></div>
+      <div class="case-body">
+        <div><h4>The brief</h4><p>Represent the Indian Olympic steeplechaser in a non-profit sponsorship pitch.</p></div>
+        <div><h4>What I did</h4><p>Built a detailed plan for the funds to be raised and how they would be used, centred on his potential and need for support.</p></div>
+        <div><h4>The outcome</h4><p>Answered fund managers' questions, making the case for backing him over other athletes.</p></div>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-head"><span class="meta"><span class="type">Sponsorship</span> · Aug 2024</span><h3>Hero MotoCorp × Pro Kabaddi League</h3></div>
+      <div class="case-body">
+        <div><h4>The brief</h4><p>Propose Hero MotoCorp as title sponsor of the Pro Kabaddi League.</p></div>
+        <div><h4>What I did</h4><p>Set out the strategic fit, sponsorship terms, tenure, budget and key deliverables, plus a detailed activation plan.</p></div>
+        <div><h4>The output</h4><p>A sponsorship framework with spend broken down across activation, branding, advertising and marketing.</p></div>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-head"><span class="meta"><span class="type">Sports marketing</span> · Jun – Jul 2024</span><h3>ProVeda marketing plan</h3></div>
+      <div class="case-body">
+        <div><h4>The brief</h4><p>Take an Ayurvedic protein bar to market, aimed at 16–45 year olds first and 45+ second.</p></div>
+        <div><h4>What I did</h4><p>Ran a situational analysis of opportunities, challenges and competition, and set three SMART goals.</p></div>
+        <div><h4>The output</h4><p>Targeted campaigns and partnerships designed to lift visibility and beat competitors.</p></div>
+      </div>
+    </article>
+  </div>
+
+  <div class="next"><a href="#field" data-nav="field"><small>Next</small><span>On the field →</span></a></div>
+</div>
+
+<!-- ============ ON THE FIELD ============ -->
+<div class="page" data-page="field" hidden>
+  <div class="page-intro">
+    <span class="kicker">On the field</span>
+    <h1>A spinner's view of the business</h1>
+    <p class="lede">Before strategy decks, there were nets, scorebooks and long days in the field. Playing at state level gave me a first-hand view of how players, teams and tournaments work.</p>
+  </div>
+
+  <div class="gallery">
+    <figure class="g-main">
+      <img src="images/celebration.jpg" alt="Daksh in a yellow team kit, raising his bat and helmet in celebration" loading="lazy">
+      <figcaption>Bat and helmet up after a big innings</figcaption>
+    </figure>
+    <figure>
+      <img src="images/bowling-night.jpg" alt="Daksh bowling under floodlights in a yellow and navy kit" loading="lazy">
+      <figcaption>Bowling under lights</figcaption>
+    </figure>
+    <figure>
+      <img src="images/bowling-2017.jpg" alt="A teenage Daksh in whites, mid-delivery as a spinner" loading="lazy">
+      <figcaption>Aged 16, bowling spin for Goregaon SC · via CricketGraph</figcaption>
+    </figure>
+  </div>
+
+  <div class="block">
+    <h2>In the news</h2>
+    <div class="press">
+      <article class="clip feature">
+        <div class="clip-text">
+          <span class="src">DNA India · Harris Shield</span>
+          <h3>9 for 56 at the age of 14</h3>
+          <p>Bowling left-arm spin for Vibgyor High against St Joseph's, I took nine wickets. My teammates then held back so I could chase all ten, until I ran out the last batsman myself. DNA wrote it up as a story about why cricket is funny.</p>
+          <p class="figs">16.4 – 1 – 56 – 9</p>
+          <a class="btn ghost" href="https://www.dnaindia.com/sports/report-ever-thought-why-cricket-is-funny-2160859" target="_blank" rel="noopener">Read on DNA India ↗</a>
+        </div>
+      </article>
+      <article class="clip">
+        <img src="images/press-cricketgraph.jpg" alt="CricketGraph article headline: 16yr old spinner Daksh Agarwal's 11/35 helps Goregaon SC win over Sunrise SC in the Kanga League '17" loading="lazy">
+        <div class="clip-text">
+          <span class="src">CricketGraph · Kanga League 2017</span>
+          <h3>11 for 35 for Goregaon SC</h3>
+          <p>Match figures of 11/35 as a 16-year-old spinner, helping Goregaon SC beat Sunrise SC.</p>
+        </div>
+      </article>
+      <article class="clip">
+        <img src="images/press-2016.jpg" alt="Newspaper report headline: Daksh Agarwal's all-round show stars in Vibgyor's win" loading="lazy">
+        <div class="clip-text">
+          <span class="src">Press report · January 2016</span>
+          <h3>All-round show in Vibgyor's win</h3>
+          <p>5 for 41 and a half-century, setting up a five-wicket win over Parle Tilak in the B Khichadia-Khar Gymkhana inter-school tournament.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2>Cricket career</h2>
+    <ol class="innings">
+      <li class="big"><span class="yr">2015</span><span class="pin"></span><div><b>9 wickets in a single innings</b><span class="sub">9/56 for Vibgyor High in the Harris Shield · headlined in DNA and Times of India Sports</span></div></li>
+      <li><span class="yr">2016</span><span class="pin"></span><div><b>5/41 and 50 runs</b><span class="sub">Inter-school win over Parle Tilak, B Khichadia-Khar Gymkhana tournament</span></div></li>
+      <li><span class="yr">—</span><span class="pin"></span><div><b>Highest wickets in a single match</b><span class="sub">Mumbai</span></div></li>
+      <li><span class="yr">2017</span><span class="pin"></span><div><b>Mumbai Mavericks</b><span class="sub">Indian Junior Premier League, Dubai</span></div></li>
+      <li><span class="yr">2017</span><span class="pin"></span><div><b>11/35 for Goregaon SC</b><span class="sub">Kanga League, win over Sunrise SC</span></div></li>
+      <li class="big"><span class="yr">2018</span><span class="pin"></span><div><b>Represented Maharashtra</b><span class="sub">All-India National Cricket Meet</span></div></li>
+      <li class="big"><span class="yr">2019</span><span class="pin"></span><div><b>Represented Maharashtra</b><span class="sub">AISM Cricket Under-19</span></div></li>
+      <li><span class="yr">2023</span><span class="pin"></span><div><b>Several Man of the Match awards</b><span class="sub">2nd Division, Cricket Association of Bengal</span></div></li>
+    </ol>
+  </div>
+
+  <div class="block">
+    <h2>Off the field</h2>
+    <ul class="list">
+      <li><span class="yr">2025</span><div><b>2nd rank, Dean's Academic Excellence Award</b><span class="sub">Jio Institute, PGP Sports Management</span></div></li>
+      <li><span class="yr">2023</span><div><b>Record viewership for the GSC T20</b><span class="sub">1,200 online viewers, the highest in three years</span></div></li>
+    </ul>
+  </div>
+
+  <div class="next"><a href="#contact" data-nav="contact"><small>Next</small><span>Contact →</span></a></div>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<div class="page" data-page="contact" hidden>
+  <div class="page-intro">
+    <span class="kicker">Contact</span>
+    <h1>Let's talk sport</h1>
+    <p class="lede">I'm always happy to talk about sports partnerships, sponsorship strategy, new sports properties and collaborations.</p>
+  </div>
+
+  <div class="contact">
+    <h2>Reach me directly</h2>
+    <div class="cta"><a class="btn primary" href="https://www.linkedin.com/in/daksh-agarwal-2b2633191" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
+    <div class="channels">
+      <div class="channel">
+        <div><small>Email</small><span class="val" id="email">dakshagarwal1830@gmail.com</span></div>
+        <button type="button" id="copy-email" data-copy="dakshagarwal1830@gmail.com">Copy</button>
+      </div>
+      <div class="channel">
+        <div><small>LinkedIn</small><span class="val">linkedin.com/in/daksh-agarwal-2b2633191</span></div>
+        <a class="go" href="https://www.linkedin.com/in/daksh-agarwal-2b2633191" target="_blank" rel="noopener">Open ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="block" style="margin-top:40px">
+    <h2>What we could work on</h2>
+    <div class="help">
+      <ul class="dot-list">
+        <li><b>Partnerships and sponsorships</b>: structuring rights, exclusivity and revenue models</li>
+        <li><b>New sports properties</b>: IP and league concepts, business models and launch plans</li>
+      </ul>
+      <ul class="dot-list">
+        <li><b>Growth and market entry</b>: sizing, benchmarking and expansion strategy</li>
+        <li><b>Sport and analytics</b>: performance analysis and fan engagement research</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer class="wrap">
+  <span>© 2026 Daksh Agarwal · <a href="https://www.linkedin.com/in/daksh-agarwal-2b2633191" target="_blank" rel="noopener">LinkedIn ↗</a></span>
+  <span>Bridging Passion with Performance</span>
+</footer>
+
+<script>
+(function () {
+  var pages = Array.prototype.slice.call(document.querySelectorAll('[data-page]'));
+  var ids = pages.map(function (p) { return p.getAttribute('data-page'); });
+  var tabs = document.querySelectorAll('.tabs a');
+
+  function show(id, push) {
+    if (ids.indexOf(id) === -1) id = 'home';
+    pages.forEach(function (p) { p.hidden = p.getAttribute('data-page') !== id; });
+    tabs.forEach(function (t) {
+      if (t.getAttribute('data-nav') === id) {
+        t.setAttribute('aria-current', 'page');
+        try { t.scrollIntoView({ block: 'nearest', inline: 'nearest' }); } catch (e) {}
+      } else { t.removeAttribute('aria-current'); }
+    });
+    window.scrollTo(0, 0);
+    if (push) { try { history.pushState(null, '', '#' + id); } catch (e) {} }
+  }
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('[data-nav]');
+    if (!a) return;
+    e.preventDefault();
+    show(a.getAttribute('data-nav'), true);
+  });
+  window.addEventListener('popstate', function () { show((location.hash || '#home').slice(1), false); });
+  window.addEventListener('hashchange', function () { show((location.hash || '#home').slice(1), false); });
+  show((location.hash || '#home').slice(1), false);
+
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var text = btn.getAttribute('data-copy');
+      var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy'; }, 1600); };
+      var fallback = function () {
+        var el = document.getElementById('email');
+        var r = document.createRange(); r.selectNodeContents(el);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        btn.textContent = 'Selected';
+      };
+      try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
